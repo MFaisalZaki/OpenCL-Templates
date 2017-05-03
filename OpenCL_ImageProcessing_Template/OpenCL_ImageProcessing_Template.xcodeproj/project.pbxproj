@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D75948531EB73B1B00056832 /* lib_image.c in Sources */ = {isa = PBXBuildFile; fileRef = D75948511EB73B1B00056832 /* lib_image.c */; };
+		D77DF4361EB488AB00339854 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D77DF4351EB488AB00339854 /* main.c */; };
+		D77DF43F1EB48ADE00339854 /* lib_opencl.c in Sources */ = {isa = PBXBuildFile; fileRef = D77DF43D1EB48ADE00339854 /* lib_opencl.c */; };
+		D77DF4441EB4A56600339854 /* kernel_filter.cl in Sources */ = {isa = PBXBuildFile; fileRef = D77DF4431EB4A56600339854 /* kernel_filter.cl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D77DF4301EB488AA00339854 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D75948511EB73B1B00056832 /* lib_image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lib_image.c; sourceTree = "<group>"; };
+		D75948521EB73B1B00056832 /* lib_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lib_image.h; sourceTree = "<group>"; };
+		D77DF4321EB488AA00339854 /* OpenCL_ImageProcessing_Template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCL_ImageProcessing_Template; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77DF4351EB488AB00339854 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		D77DF43D1EB48ADE00339854 /* lib_opencl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lib_opencl.c; sourceTree = "<group>"; };
+		D77DF43E1EB48ADE00339854 /* lib_opencl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lib_opencl.h; sourceTree = "<group>"; };
+		D77DF4421EB4A4C600339854 /* test.ppm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.ppm; sourceTree = "<group>"; };
+		D77DF4431EB4A56600339854 /* kernel_filter.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = kernel_filter.cl; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D77DF42F1EB488AA00339854 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D75948501EB73AF200056832 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				D75948511EB73B1B00056832 /* lib_image.c */,
+				D75948521EB73B1B00056832 /* lib_image.h */,
+			);
+			name = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		D77DF4291EB488AA00339854 = {
+			isa = PBXGroup;
+			children = (
+				D77DF4341EB488AA00339854 /* OpenCL_ImageProcessing_Template */,
+				D77DF4331EB488AA00339854 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D77DF4331EB488AA00339854 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D77DF4321EB488AA00339854 /* OpenCL_ImageProcessing_Template */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D77DF4341EB488AA00339854 /* OpenCL_ImageProcessing_Template */ = {
+			isa = PBXGroup;
+			children = (
+				D75948501EB73AF200056832 /* ImageProcessing */,
+				D77DF4411EB4A4B400339854 /* Input Images */,
+				D77DF4401EB48C3B00339854 /* Kernel Code */,
+				D77DF43C1EB48AB800339854 /* OpenCL Abstraction */,
+				D77DF4351EB488AB00339854 /* main.c */,
+			);
+			path = OpenCL_ImageProcessing_Template;
+			sourceTree = "<group>";
+		};
+		D77DF43C1EB48AB800339854 /* OpenCL Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				D77DF43D1EB48ADE00339854 /* lib_opencl.c */,
+				D77DF43E1EB48ADE00339854 /* lib_opencl.h */,
+			);
+			name = "OpenCL Abstraction";
+			sourceTree = "<group>";
+		};
+		D77DF4401EB48C3B00339854 /* Kernel Code */ = {
+			isa = PBXGroup;
+			children = (
+				D77DF4431EB4A56600339854 /* kernel_filter.cl */,
+			);
+			name = "Kernel Code";
+			sourceTree = "<group>";
+		};
+		D77DF4411EB4A4B400339854 /* Input Images */ = {
+			isa = PBXGroup;
+			children = (
+				D77DF4421EB4A4C600339854 /* test.ppm */,
+			);
+			name = "Input Images";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D77DF4311EB488AA00339854 /* OpenCL_ImageProcessing_Template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D77DF4391EB488AB00339854 /* Build configuration list for PBXNativeTarget "OpenCL_ImageProcessing_Template" */;
+			buildPhases = (
+				D77DF42E1EB488AA00339854 /* Sources */,
+				D77DF42F1EB488AA00339854 /* Frameworks */,
+				D77DF4301EB488AA00339854 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCL_ImageProcessing_Template;
+			productName = OpenCL_ImageProcessing_Template;
+			productReference = D77DF4321EB488AA00339854 /* OpenCL_ImageProcessing_Template */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D77DF42A1EB488AA00339854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Mustafa Faisal";
+				TargetAttributes = {
+					D77DF4311EB488AA00339854 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = D7377R9Q84;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D77DF42D1EB488AA00339854 /* Build configuration list for PBXProject "OpenCL_ImageProcessing_Template" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D77DF4291EB488AA00339854;
+			productRefGroup = D77DF4331EB488AA00339854 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D77DF4311EB488AA00339854 /* OpenCL_ImageProcessing_Template */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D77DF42E1EB488AA00339854 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D77DF43F1EB48ADE00339854 /* lib_opencl.c in Sources */,
+				D75948531EB73B1B00056832 /* lib_image.c in Sources */,
+				D77DF4441EB4A56600339854 /* kernel_filter.cl in Sources */,
+				D77DF4361EB488AB00339854 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D77DF4371EB488AB00339854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D77DF4381EB488AB00339854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D77DF43A1EB488AB00339854 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D7377R9Q84;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D77DF43B1EB488AB00339854 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = D7377R9Q84;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D77DF42D1EB488AA00339854 /* Build configuration list for PBXProject "OpenCL_ImageProcessing_Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77DF4371EB488AB00339854 /* Debug */,
+				D77DF4381EB488AB00339854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D77DF4391EB488AB00339854 /* Build configuration list for PBXNativeTarget "OpenCL_ImageProcessing_Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77DF43A1EB488AB00339854 /* Debug */,
+				D77DF43B1EB488AB00339854 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D77DF42A1EB488AA00339854 /* Project object */;
+}
