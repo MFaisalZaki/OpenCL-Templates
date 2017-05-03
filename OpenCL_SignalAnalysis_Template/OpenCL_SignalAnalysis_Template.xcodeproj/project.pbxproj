@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7250ED71DF0310A003933C1 /* Kernel_Matrix.cl in Sources */ = {isa = PBXBuildFile; fileRef = D7250ED61DF0310A003933C1 /* Kernel_Matrix.cl */; };
+		D7250ED91DF03118003933C1 /* Kernel_DCT.cl in Sources */ = {isa = PBXBuildFile; fileRef = D7250ED81DF03118003933C1 /* Kernel_DCT.cl */; };
+		D7250EDC1DF03149003933C1 /* lib_opencl.c in Sources */ = {isa = PBXBuildFile; fileRef = D7250EDA1DF03149003933C1 /* lib_opencl.c */; };
+		D7250EDE1DF03164003933C1 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7250EDD1DF03164003933C1 /* OpenCL.framework */; };
+		D7250EE31DF031D8003933C1 /* lib_signal.c in Sources */ = {isa = PBXBuildFile; fileRef = D7250EE11DF031D8003933C1 /* lib_signal.c */; };
+		D783B2821DF03044002FF07A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D783B2811DF03044002FF07A /* main.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D783B27C1DF03044002FF07A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D7250ED61DF0310A003933C1 /* Kernel_Matrix.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = Kernel_Matrix.cl; sourceTree = "<group>"; };
+		D7250ED81DF03118003933C1 /* Kernel_DCT.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = Kernel_DCT.cl; sourceTree = "<group>"; };
+		D7250EDA1DF03149003933C1 /* lib_opencl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lib_opencl.c; sourceTree = "<group>"; };
+		D7250EDB1DF03149003933C1 /* lib_opencl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lib_opencl.h; sourceTree = "<group>"; };
+		D7250EDD1DF03164003933C1 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		D7250EE11DF031D8003933C1 /* lib_signal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lib_signal.c; sourceTree = "<group>"; };
+		D7250EE21DF031D8003933C1 /* lib_signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lib_signal.h; sourceTree = "<group>"; };
+		D7250EE41DF03208003933C1 /* lib_signal_cfg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lib_signal_cfg.h; sourceTree = "<group>"; };
+		D783B27E1DF03044002FF07A /* OpenCL_SignalAnalysis_Template */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCL_SignalAnalysis_Template; sourceTree = BUILT_PRODUCTS_DIR; };
+		D783B2811DF03044002FF07A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D783B27B1DF03044002FF07A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7250EDE1DF03164003933C1 /* OpenCL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D783B2751DF03044002FF07A = {
+			isa = PBXGroup;
+			children = (
+				D7250EDD1DF03164003933C1 /* OpenCL.framework */,
+				D783B2801DF03044002FF07A /* OpenCL_SignalAnalysis_Template */,
+				D783B27F1DF03044002FF07A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D783B27F1DF03044002FF07A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D783B27E1DF03044002FF07A /* OpenCL_SignalAnalysis_Template */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D783B2801DF03044002FF07A /* OpenCL_SignalAnalysis_Template */ = {
+			isa = PBXGroup;
+			children = (
+				D783B28A1DF0307A002FF07A /* OpenCLAbstraction */,
+				D783B2891DF03073002FF07A /* KernelCode */,
+				D783B2881DF03069002FF07A /* SignalAnalysis */,
+				D783B2811DF03044002FF07A /* main.c */,
+			);
+			path = OpenCL_SignalAnalysis_Template;
+			sourceTree = "<group>";
+		};
+		D783B2881DF03069002FF07A /* SignalAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				D7250EE11DF031D8003933C1 /* lib_signal.c */,
+				D7250EE21DF031D8003933C1 /* lib_signal.h */,
+				D7250EE41DF03208003933C1 /* lib_signal_cfg.h */,
+			);
+			name = SignalAnalysis;
+			sourceTree = "<group>";
+		};
+		D783B2891DF03073002FF07A /* KernelCode */ = {
+			isa = PBXGroup;
+			children = (
+				D7250ED61DF0310A003933C1 /* Kernel_Matrix.cl */,
+				D7250ED81DF03118003933C1 /* Kernel_DCT.cl */,
+			);
+			name = KernelCode;
+			sourceTree = "<group>";
+		};
+		D783B28A1DF0307A002FF07A /* OpenCLAbstraction */ = {
+			isa = PBXGroup;
+			children = (
+				D7250EDA1DF03149003933C1 /* lib_opencl.c */,
+				D7250EDB1DF03149003933C1 /* lib_opencl.h */,
+			);
+			name = OpenCLAbstraction;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D783B27D1DF03044002FF07A /* OpenCL_SignalAnalysis_Template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D783B2851DF03044002FF07A /* Build configuration list for PBXNativeTarget "OpenCL_SignalAnalysis_Template" */;
+			buildPhases = (
+				D783B27A1DF03044002FF07A /* Sources */,
+				D783B27B1DF03044002FF07A /* Frameworks */,
+				D783B27C1DF03044002FF07A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCL_SignalAnalysis_Template;
+			productName = OpenCL_SignalAnalysis_Template;
+			productReference = D783B27E1DF03044002FF07A /* OpenCL_SignalAnalysis_Template */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D783B2761DF03044002FF07A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mustafa Faisal";
+				TargetAttributes = {
+					D783B27D1DF03044002FF07A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = D783B2791DF03044002FF07A /* Build configuration list for PBXProject "OpenCL_SignalAnalysis_Template" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D783B2751DF03044002FF07A;
+			productRefGroup = D783B27F1DF03044002FF07A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D783B27D1DF03044002FF07A /* OpenCL_SignalAnalysis_Template */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D783B27A1DF03044002FF07A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7250EDC1DF03149003933C1 /* lib_opencl.c in Sources */,
+				D7250ED71DF0310A003933C1 /* Kernel_Matrix.cl in Sources */,
+				D7250EE31DF031D8003933C1 /* lib_signal.c in Sources */,
+				D783B2821DF03044002FF07A /* main.c in Sources */,
+				D7250ED91DF03118003933C1 /* Kernel_DCT.cl in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D783B2831DF03044002FF07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D783B2841DF03044002FF07A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D783B2861DF03044002FF07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D783B2871DF03044002FF07A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D783B2791DF03044002FF07A /* Build configuration list for PBXProject "OpenCL_SignalAnalysis_Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D783B2831DF03044002FF07A /* Debug */,
+				D783B2841DF03044002FF07A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D783B2851DF03044002FF07A /* Build configuration list for PBXNativeTarget "OpenCL_SignalAnalysis_Template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D783B2861DF03044002FF07A /* Debug */,
+				D783B2871DF03044002FF07A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D783B2761DF03044002FF07A /* Project object */;
+}
