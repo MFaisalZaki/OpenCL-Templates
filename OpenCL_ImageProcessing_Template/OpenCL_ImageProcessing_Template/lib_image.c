@@ -147,6 +147,7 @@ void imageInit(const cl_device_id * const device_list,
 }
 
 void imageApplyFilter(cl_float      filter[],
+                      cl_float      cmp_threshold,
                       cl_int        size,
                       opencl_image_t * const input_image,
                       opencl_image_t * const ret_image,
@@ -240,10 +241,11 @@ void imageApplyFilter(cl_float      filter[],
     *err = 0;
     
     /* Setup the kernel arguments. */
-    *err |= clSetKernelArg(image_kernel_list[0], 0, sizeof (cl_mem), &input_image_buffer);
-    *err |= clSetKernelArg(image_kernel_list[0], 1, sizeof (cl_mem), &output_image_buffer);
-    *err |= clSetKernelArg(image_kernel_list[0], 2, sizeof (cl_mem), &filter_w_buffer);
-    *err |= clSetKernelArg(image_kernel_list[0], 3, sizeof(cl_int), &size);
+    *err |= clSetKernelArg(image_kernel_list[0], 0, sizeof (cl_mem),  &input_image_buffer);
+    *err |= clSetKernelArg(image_kernel_list[0], 1, sizeof (cl_mem),  &output_image_buffer);
+    *err |= clSetKernelArg(image_kernel_list[0], 2, sizeof (cl_mem),  &filter_w_buffer);
+    *err |= clSetKernelArg(image_kernel_list[0], 3, sizeof(cl_float), &cmp_threshold);
+    *err |= clSetKernelArg(image_kernel_list[0], 4, sizeof(cl_int),   &size);
     
     if (*err != CL_SUCCESS)
     {

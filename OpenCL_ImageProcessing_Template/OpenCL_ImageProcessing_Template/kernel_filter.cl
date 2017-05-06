@@ -1,7 +1,8 @@
 __kernel void Filter(__global    float4  *input,
                      __global    float4  *output,
-                     __constant  float  *filter_ws,
-                     int filter_size)
+                     __constant  float   *filter_ws,
+                                 float   threshold,
+                                 int     filter_size)
 {
     
     int2 pos = {get_global_id(0), get_global_id(1)};
@@ -37,69 +38,9 @@ __kernel void Filter(__global    float4  *input,
     else
     {
         /* Start padding the filter but we need to know which corner are we in ? */
-        output[index] = 255;
-        
+        output[index] = 0;
     }
-    output[index] = response;
+    
+    /* Check compare threshold. */
+    output[index] = (response > (float4)threshold) ? (float4)255 : (float4)0;
 }
-
-/*
- 
- int fIndex = 0;
- float4 sum = (float4) 0.0;
- 
- for (int r = -HALF_FILTER_SIZE; r <= HALF_FILTER_SIZE; r++)
- {
-	int curRow = my + r * IMAGE_W;
-	for (int c = -HALF_FILTER_SIZE; c <= HALF_FILTER_SIZE; c++)
-	{
- sum += input[ curRow + c ] * filter[ fIndex ];
- fIndex++;
-	
-	}
- }
- output[my] = sum;
- 
- 
- 
- __kernel void convolute(
-	const __global float * input,
-	__global float * output,
-	__global float * filter
- )
- {
- 
-	int rowOffset = get_global_id(1) * IMAGE_W * 4;
-	int my = 4 * get_global_id(0) + rowOffset;
-	
-	int fIndex = 0;
-	float sumR = 0.0;
-	float sumG = 0.0;
-	float sumB = 0.0;
-	float sumA = 0.0;
-	
- 
-	for (int r = -HALF_FILTER_SIZE; r <= HALF_FILTER_SIZE; r++)
-	{
- int curRow = my + r * (IMAGE_W * 4);
- for (int c = -HALF_FILTER_SIZE; c <= HALF_FILTER_SIZE; c++, fIndex += 4)
- {
- int offset = c * 4;
- 
- sumR += input[ curRow + offset   ] * filter[ fIndex   ];
- sumG += input[ curRow + offset+1 ] * filter[ fIndex+1 ];
- sumB += input[ curRow + offset+2 ] * filter[ fIndex+2 ];
- sumA += input[ curRow + offset+3 ] * filter[ fIndex+3 ];
- }
-	}
-	
-	output[ my     ] = sumR;
-	output[ my + 1 ] = sumG;
-	output[ my + 2 ] = sumB;
-	output[ my + 3 ] = sumA;
-	
- }
- 
- 
- 
- */

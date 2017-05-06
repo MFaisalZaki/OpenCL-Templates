@@ -57,16 +57,19 @@ int main(int argc, const char *argv[])
     /* Apply filter.
      */
     {
+        cl_float threshold = 200.6f;
+        
         /* Sobel filer. */
         cl_float filter [] =
         {
-            -1, 0, 1,
-            -2, 0, 2,
-            -1, 0, 1
+            -1, -2, -1,
+             0, 0,   0,
+             1, 2,   1
         };
         
         /* Apply filter on input image. */
         imageApplyFilter(filter, /* filter weights. */
+                         threshold,
                          3,      /* filter nxn --> will be conculded inside this function. */
                          input_opencl_image, /* input image. */
                          filtered_opencl_image, /* output image. */

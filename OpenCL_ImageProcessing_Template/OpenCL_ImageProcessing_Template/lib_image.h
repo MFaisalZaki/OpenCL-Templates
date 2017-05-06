@@ -36,6 +36,7 @@ extern void imageInit(const cl_device_id * const device_list,
 
 
 extern void imageApplyFilter(cl_float      filter[],
+                             cl_float      cmp_threshold,
                              cl_int        size,
                              opencl_image_t * const input_image,
                              opencl_image_t * const ret_image,
